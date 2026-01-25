@@ -1,0 +1,88 @@
+site_name: Alzheimer's Disease and Neuroscience Studies | @TheBelloPerson
+site_description: Fundamental science and math for research on Alzheimer Disease and neuroscience.
+site_author: Student Research Notes
+
+theme:
+  name: material
+
+  features:
+    # LEFT sidebar - collapsible navigation
+    # navigation.indexes removed - was causing state reset flash on section clicks
+    - navigation.instant  # Client-side navigation - prevents full page reload
+    - navigation.tracking
+    - navigation.path  # Breadcrumbs at top of page
+
+    # RIGHT sidebar (On this page)
+    - toc.follow
+
+    # Content
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - admonition
+  - footnotes
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js
+  - javascripts/katex.js
+  - javascripts/navigation.js  # Multi-section collapsible navigation
+  - javascripts/header-scroll.js  # Auto-hide header on scroll
+
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
+  - stylesheets/navigation.css  # Prevent flash during navigation
+  - stylesheets/header-scroll.css  # Auto-hide header on scroll
+  - stylesheets/breadcrumbs.css  # Breadcrumb alignment and styling
+
+nav:
+  - Home: index.md
+  - Glossary: glossary.md
+  - Did You Know?: did-you-know.md
+  - Quiz Yourself: quiz-yourself.md
+
+  - Brain Fundamentals:
+      - Overview: brain-fundamentals/index.md
+      - Structure: brain-fundamentals/brain-structure.md
+      - Neural Networks: brain-fundamentals/neural-networks.md
+
+  - Alzheimer's Disease (AD):
+      - Basics: ad-basics/index.md
+      - Symptoms: ad-basics/symptoms.md
+      - Causes: ad-basics/why-does-it-happen.md
+      - How Does It Happen?: ad-basics/how-does-it-happen.md
+      - Treatment and Cure: ad-basics/treatment.md
+
+  - Other Neurological Diseases:
+      - Overview: other-diseases/index.md
+      - Parkinson's Disease (PD): other-diseases/parkinsons.md
+
+  - Math Basics for Research and Studies:
+      - Overview: math/index.md
+
+      - Statistics:                       # No page needed!
+          - Descriptive: math/stats-descriptive.md
+          - Inferential: math/stats-inferential.md
+
+      - Linear Algebra:                   # No page needed!
+          - Vectors: math/vectors.md
+          - Matrices: math/matrices.md
+
+  - MRI & Machine Learning:
+      - Overview: mri-ml/index.md
+      - MRI Basics: mri-ml/mri-basics.md
+      - ML Workflow: mri-ml/ml-workflow.md
+
+  - Resources:
+      - Overview: resources/index.md
+      - Datasets: resources/datasets.md
+      - Glossary: resources/glossary.md
