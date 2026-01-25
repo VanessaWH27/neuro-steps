@@ -1,0 +1,75 @@
+/* Prevent flash during navigation state restoration */
+
+/* Hide site title from sidebar navigation since it's already in the top banner */
+.md-sidebar--primary .md-nav--primary > .md-nav__title {
+  display: none;
+}
+
+/* Disable all transitions on navigation during page load */
+.md-nav {
+  transition: none !important;
+}
+
+.md-nav__list {
+  transition: none !important;
+}
+
+.md-nav__item {
+  transition: none !important;
+}
+
+/* Hide the navigation initially to prevent any flash */
+.md-sidebar--primary .md-sidebar__scrollwrap {
+  opacity: 0;
+  padding-top: 0;
+  transition: opacity 0s !important;
+}
+
+/* Show navigation once JavaScript has restored state */
+.md-sidebar--primary.nav-ready .md-sidebar__scrollwrap {
+  opacity: 1;
+}
+
+/* Keep all transitions disabled to prevent animation flash */
+.md-sidebar--primary .md-nav,
+.md-sidebar--primary .md-nav__list,
+.md-sidebar--primary .md-nav__item,
+.md-sidebar--primary.nav-ready .md-nav,
+.md-sidebar--primary.nav-ready .md-nav__list,
+.md-sidebar--primary.nav-ready .md-nav__item {
+  transition: none !important;
+}
+
+/* Fallback: show navigation after 100ms even if JS doesn't run */
+@keyframes showNav {
+  to {
+    opacity: 1;
+  }
+}
+
+.md-sidebar--primary .md-sidebar__scrollwrap {
+  animation: showNav 0s 0.1s forwards;
+}
+
+/* Align all content (left nav, center h1, right TOC) at the same top level */
+
+/* Minimal padding to align h1 with left sidebar Home link */
+.md-content__inner {
+  padding-top: 0.0rem;
+}
+
+/* All h1 titles start at the same position - aligned with left nav */
+.md-content__inner > h1:first-child {
+  margin-top: 0.6rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* When breadcrumbs present, pull h1 up to compensate for breadcrumb height */
+.md-path + h1 {
+  margin-top: -3.4rem !important;
+}
+
+/* Add matching padding to right sidebar (TOC) */
+.md-sidebar--secondary .md-sidebar__scrollwrap {
+  padding-top: 0.6rem;
+}

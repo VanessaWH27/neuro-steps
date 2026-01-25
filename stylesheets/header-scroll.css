@@ -1,0 +1,23 @@
+/* Auto-hiding header on scroll */
+
+.md-header {
+  position: fixed;
+  top: 0;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Hidden state - slide header up */
+.md-header.md-header--hidden {
+  transform: translateY(-100%);
+}
+
+/* Ensure content doesn't jump when header hides */
+.md-container {
+  /* Material theme already handles this with padding-top */
+}
+
+/* Optional: Add shadow when header is visible and scrolled */
+.md-header:not(.md-header--hidden) {
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+}

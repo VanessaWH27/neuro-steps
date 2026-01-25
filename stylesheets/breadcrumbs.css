@@ -1,0 +1,82 @@
+
+/* Breadcrumb styling - use same positioning as sidebar titles */
+
+/* Hide breadcrumbs from header completely */
+.md-header .md-path {
+  display: none !important;
+}
+
+/* Position breadcrumbs in content area - visible and clear */
+/* Hide loose text nodes (like ">") by setting font-size to 0 */
+.md-path {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0.0rem 0;
+  padding: 0.6rem 0;
+  font-size: 0 !important;  /* Hide all loose text nodes including ">" */
+  line-height: 1.2;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Restore font size only for breadcrumb links and list items */
+.md-path__list {
+  font-size: 0.8rem;
+}
+
+.md-path__item {
+  font-size: 0.8rem;
+}
+
+.md-path__link {
+  font-size: 0.8rem;
+}
+
+/* Remove any extra space above content */
+.md-content__inner {
+  position: relative;
+}
+
+/* Adjust breadcrumb list styling */
+.md-path__list {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Style breadcrumb items */
+.md-path__item {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Breadcrumb links */
+.md-path__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  transition: background-color 0.2s;
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  text-decoration: none;
+}
+
+.md-path__link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--md-default-fg-color);
+}
+
+/* Dark mode hover */
+[data-md-color-scheme="slate"] .md-path__link:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+/* Separator between breadcrumb items - only show "/" */
+.md-path__item:not(:last-child)::after {
+  content: "/";
+  margin: 0 0.4rem;
+  opacity: 0.5;
+  font-size: 0.8rem !important;
+}
