@@ -1,4 +1,4 @@
-site_name: Alzheimer's Disease and Neuroscience Studies | @TheBelloPerson
+site_name: Brain and Neuroscience Explorations
 site_description: Fundamental science and math for research on Alzheimer Disease and neuroscience.
 site_author: Student Research Notes
 
@@ -46,6 +46,7 @@ extra_css:
 
 nav:
   - Home: index.md
+  - About Us: about.md
   - Glossary: glossary.md
   - Did You Know?: did-you-know.md
   - Quiz Yourself: quiz-yourself.md
@@ -55,18 +56,20 @@ nav:
       - Structure: brain-fundamentals/brain-structure.md
       - Neural Networks: brain-fundamentals/neural-networks.md
 
-  - Alzheimer's Disease (AD):
-      - Basics: ad-basics/index.md
-      - Symptoms: ad-basics/symptoms.md
-      - Causes: ad-basics/why-does-it-happen.md
-      - How Does It Happen?: ad-basics/how-does-it-happen.md
-      - Treatment and Cure: ad-basics/treatment.md
+  - Neuroscience:
+      - Overview: neuroscience/index.md
 
-  - Other Neurological Diseases:
+  - Neurological Diseases:
       - Overview: other-diseases/index.md
+      - Alzheimer's Disease (AD):
+          - Basics: ad-basics/index.md
+          - Symptoms: ad-basics/symptoms.md
+          - Causes: ad-basics/why-does-it-happen.md
+          - How Does It Happen?: ad-basics/how-does-it-happen.md
+          - Treatment and Cure: ad-basics/treatment.md
       - Parkinson's Disease (PD): other-diseases/parkinsons.md
 
-  - Math Basics for Research and Studies:
+  - Math Basics:
       - Overview: math/index.md
 
       - Statistics:                       # No page needed!
@@ -77,12 +80,17 @@ nav:
           - Vectors: math/vectors.md
           - Matrices: math/matrices.md
 
-  - MRI & Machine Learning:
+  - R&D:
       - Overview: mri-ml/index.md
-      - MRI Basics: mri-ml/mri-basics.md
-      - ML Workflow: mri-ml/ml-workflow.md
+      - MRI:
+          - Basics: mri-ml/mri-basics.md
+      - Machine Learning (ML):
+          - Workflow: mri-ml/ml-workflow.md
 
   - Resources:
       - Overview: resources/index.md
       - Datasets: resources/datasets.md
       - Glossary: resources/glossary.md
+
+  - Contributors:
+      - The BelloPerson: contributors/thebelloperson.md
