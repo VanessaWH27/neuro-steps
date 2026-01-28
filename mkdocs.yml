@@ -46,11 +46,11 @@ extra_css:
 
 nav:
   - Home: index.md
-  - About Us: about.md
+  - About Us:
+      - Overview: about.md
+      - Contributors:
+          - The BelloPerson: contributors/thebelloperson.md
   - Glossary: glossary.md
-  - Did You Know?: did-you-know.md
-  - Quiz Yourself: quiz-yourself.md
-
   - Brain Fundamentals:
       - Overview: brain-fundamentals/index.md
       - Structure: brain-fundamentals/brain-structure.md
@@ -92,5 +92,5 @@ nav:
       - Datasets: resources/datasets.md
       - Glossary: resources/glossary.md
 
-  - Contributors:
-      - The BelloPerson: contributors/thebelloperson.md
+  - Did You Know?: did-you-know.md
+  - Quiz Yourself: quiz-yourself.md
